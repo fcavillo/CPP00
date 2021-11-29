@@ -6,45 +6,30 @@
 #    By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/24 17:54:15 by fcavillo          #+#    #+#              #
-#    Updated: 2021/11/26 16:37:32 by fcavillo         ###   ########.fr        #
+#    Updated: 2021/11/29 15:36:25 by fcavillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = cpp.out
+NAME = megaphone
 
-RM = rm -f
+CC	= clang++
 
-CC	= gcc
+CFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-CFLAGS	= -Wall -Wextra -Werror
+SRCS =	megaphone.cpp
 
-SRC_FILES =	megaphone.cpp
+OBJS = $(SRCS:.cpp=.o)
 
-INCL = -I .
-
-LIBS = -lpthread
-
-OBJS_DIR = ./.objs/
-OBJ_FILES = $(SRC_FILES:.cpp=.o)
-OBJS = $(addprefix $(OBJS_DIR), $(OBJ_FILES))
-
-$(NAME): $(OBJS_DIR) $(OBJS) 
-		${CC} ${CFLAGS} ${OBJS} ${LIBS} -o ${NAME} ${INCL}
-
-$(OBJS_DIR)%.o: $(SRCS_DIR)%.c $(HEADERS) Makefile
-	$(CC) $(CFLAGS) -o $@ -c $<
-
-$(OBJS_DIR):
-	mkdir -p $@
+${NAME}: $(OBJS)
+		$(CC) $(FLAGS) -o $(NAME) $(OBJS)
 
 all : ${NAME}
 
 clean:
-	$(RM) -Rf $(OBJS_DIR)
-	${RM} ${OBJS}
+	rm -f $(OBJS)
 
 fclean: clean
-	${RM} ${NAME}
+	rm -f ${NAME}
 
 re: fclean all
 
