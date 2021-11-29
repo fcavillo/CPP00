@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   phonebook.class.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 15:42:44 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/11/29 15:49:49 by fcavillo         ###   ########.fr       */
+/*   Created: 2021/11/29 16:31:22 by fcavillo          #+#    #+#             */
+/*   Updated: 2021/11/29 19:39:29 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef PHONEBOOK_H
+# define PHONEBOOK_H
 
 #include <iostream>
 #include <cstring>
 
-int main(void)
-{
-	char buff[256];
+/*
+** declare classes
+*/
+
+class Phonebook{
+
+public:
+
 	
-	std::cin >> buff;
-	return (0);
-}
+	const int	i;
+	
+	Phonebook(void);
+	~Phonebook(void);
+
+	void	fct(void) const;
+};
+
+
+
+#endif
