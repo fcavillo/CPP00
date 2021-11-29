@@ -6,7 +6,7 @@
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 15:42:44 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/11/29 19:44:27 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/11/30 00:02:04 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,53 @@
 #include <cstring>
 #include "phonebook.class.hpp"
 
-/*
-** define classes
-*/
+//index 0 broken
 
 Phonebook::Phonebook(void)
 {
-	std::cout << "constructor" << std::endl;
-
-	this->fct();
-	
+	this->nb_contacts = 0;
 	return ;
 }
 
 Phonebook::~Phonebook(void)
 {
-	std::cout << "destructor" << std::endl;
 	return ;
 }
 
-void	Phonebook::fct(void) const
+void	Phonebook::add(int nb)
 {
-	std::cout << "fct in phonebook class" << std::endl;
+	this->contacts[nb].fill_info(nb);
+	if (this->nb_contacts < 8)
+		nb_contacts++;
 	return ;
+}
+
+void	Phonebook::search(void)
+{
+	int	i = 0;
+
+	if (this->nb_contacts == 0)
+	{
+		std::cout << "Phonebook is empty" << std::endl;
+		return ;
+	}
+	while (i < this->nb_contacts)
+	{
+		this->contacts[i].print_list();
+		i++;
+	}
+	while (1)
+	{
+		std::cout << "Enter the contact index to see the info" << std::endl;
+		std::cin >> i;
+		if (std::cin.eof())
+			return ;		
+		else if (std::cin.good() && i > 0 && i < this->nb_contacts)
+		{
+			this->contacts[i].print_contact();
+			return ;
+		}
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	}
 }

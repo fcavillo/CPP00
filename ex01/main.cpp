@@ -6,7 +6,7 @@
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 17:25:38 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/11/29 17:26:47 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/11/30 00:02:23 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,30 @@
 #include <cstring>
 #include "phonebook.class.hpp"
 
-/*
-** create an instance book of the class Phonebook
-*/
-
 int main(void)
 {
-	Phonebook	book(7);
-	
-	book.fct();
-	std::cout << book.i << std::endl;
+	Phonebook	phonebook;
+	std::string	input;
+	int			nb = 0;
+
+	while(std::cin.eof() == 0)
+	{
+		std::cout << "Enter a command (ADD, EXIT, SEARCH) :" << std::endl;
+		std::cin >> input;
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		if (nb == 8)
+			nb = 0;
+		if (input == "ADD")
+		{
+			phonebook.add(nb);
+			nb++;
+		}	
+		else if (input == "SEARCH")
+			phonebook.search();
+		else if (input == "EXIT")
+			break;
+		else
+			std::cout << "Unknown command" << std::endl;
+	}
 	return (0);
 }
