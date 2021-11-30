@@ -6,7 +6,7 @@
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 17:25:38 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/11/30 12:05:25 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/11/30 17:50:57 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int main(void)
 	{
 		std::cout << "Enter a command (ADD, EXIT, SEARCH) :" << std::endl;
 		std::cin >> input;
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		if (nb == 9)
 			nb = 1;
 		if (input == "ADD")

@@ -6,7 +6,7 @@
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 16:31:22 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/11/30 12:10:30 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/11/30 17:59:37 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Phonebook
 
 	void	add(int nb);
 	void	search(void);
+	void	print_header(void);
 
 	private:
 	
