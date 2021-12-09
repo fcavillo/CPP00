@@ -6,7 +6,7 @@
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 12:22:36 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/12/09 14:25:00 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/12/09 14:57:31 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,6 +119,9 @@ void	Account::_displayTimestamp( void )
 	time_t		now = time(0);
 	tm			*ltm = localtime(&now);
     
-	std::cout << "[" << 1900 + ltm->tm_year << 1 + ltm->tm_mon << ltm->tm_mday << "_" << ltm->tm_hour << ltm->tm_min << ltm->tm_sec << "]" << " ";
+	std::cout << "[" << 1900 + ltm->tm_year << 1 + ltm->tm_mon;
+	if (ltm->tm_mday < 10)
+		std::cout << "0";
+	std::cout << ltm->tm_mday << "_" << ltm->tm_hour << ltm->tm_min << ltm->tm_sec << "]" << " ";
 	return ;
 }
