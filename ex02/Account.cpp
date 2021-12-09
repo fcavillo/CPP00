@@ -6,7 +6,7 @@
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 12:22:36 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/11/30 17:37:19 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/12/06 17:14:16 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	Account::_totalAmount = 0;
 int	Account::_totalNbDeposits = 0;
 int	Account::_totalNbWithdrawals = 0;
 
-Account::Account( int initial_deposit ) :_amount(initial_deposit)
+Account::Account( int initial_deposit ) : _amount(initial_deposit)
 {
 	this->_accountIndex = this->_nbAccounts++;
 	this->_nbDeposits = 0;

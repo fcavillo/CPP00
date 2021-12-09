@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.class.hpp                                :+:      :+:    :+:   */
+/*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 16:31:22 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/11/30 17:59:37 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/12/02 11:10:25 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_CLASS_H
-# define PHONEBOOK_CLASS_H
+#ifndef PHONEBOOK_H
+# define PHONEBOOK_H
 
 #include <iostream>
 #include <cstring>
 #include <limits>
-#include "contact.class.hpp"
+#include "Contact.hpp"
 
 class Phonebook
 {

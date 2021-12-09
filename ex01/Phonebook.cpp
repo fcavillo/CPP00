@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.class.cpp                                :+:      :+:    :+:   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 15:42:44 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/11/30 18:23:49 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/12/02 10:34:21 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cstring>
-#include "phonebook.class.hpp"
+#include "Phonebook.hpp"
 
 Phonebook::Phonebook(void)
 {

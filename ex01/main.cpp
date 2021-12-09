@@ -6,13 +6,13 @@
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 17:25:38 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/11/30 17:50:57 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/12/02 10:34:33 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cstring>
-#include "phonebook.class.hpp"
+#include "Phonebook.hpp"
 
 int main(void)
 {
