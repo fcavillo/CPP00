@@ -6,7 +6,7 @@
 #    By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/24 17:54:15 by fcavillo          #+#    #+#              #
-#    Updated: 2021/11/29 22:20:08 by fcavillo         ###   ########.fr        #
+#    Updated: 2021/12/09 14:27:16 by fcavillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,10 +14,10 @@ NAME = phonebook
 
 CC	= clang++
 
-CFLAGS	= -Wall -Wextra -Werror -std=c++98
+CFLAGS	= -Wall -Wextra -Werror #-std=c++98
 
-SRCS =	phonebook.class.cpp \
-		contact.class.cpp \
+SRCS =	Phonebook.cpp \
+		Contact.cpp \
 		main.cpp
 
 OBJS = $(SRCS:.cpp=.o)

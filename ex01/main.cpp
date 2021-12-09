@@ -6,7 +6,7 @@
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 17:25:38 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/12/02 10:34:33 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/12/09 11:57:59 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(void)
 	std::string	input;
 	int			nb = 1;
 
-	while(std::cin.eof() == 0)
+	while (std::cin.eof() == 0)
 	{
 		std::cout << "Enter a command (ADD, EXIT, SEARCH) :" << std::endl;
 		std::cin >> input;
@@ -36,7 +36,7 @@ int main(void)
 		else if (input == "EXIT")
 			break;
 		else
-			std::cout << "Unknown command" << std::endl;
+			std::cout << std::endl;
 	}
 	return (0);
 }

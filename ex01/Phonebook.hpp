@@ -6,7 +6,7 @@
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 16:31:22 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/12/02 11:10:25 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/12/09 11:36:05 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 #include <cstring>
 #include <limits>
 #include "Contact.hpp"
+
+/*
+**	class declarations should be in the .hpp
+**	the constructor and destructor are public
+**	the contacts array is private but accessible through public functions in the class
+*/
 
 class Phonebook
 {

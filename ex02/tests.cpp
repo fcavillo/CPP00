@@ -12,6 +12,12 @@
 #include <functional>
 #include "Account.hpp"
 
+/*
+**	accounts, w and d are vectors ( ~dynamic sized arrays), with a set beginning and ending to iterate through
+**	std::pair is a way to store two heterogeneous objects as a single unit :
+**	here, "it" is a pair of the accounts + deposits or accounts + withdrawals
+**	mem_fun_ref creates a function wrapper object that allows it to be used by the foreach() on each iteration of the accounts vector
+*/
 
 int		main( void ) {
 

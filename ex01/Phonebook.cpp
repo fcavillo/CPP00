@@ -6,13 +6,16 @@
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 15:42:44 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/12/02 10:34:21 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/12/09 11:57:19 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cstring>
 #include "Phonebook.hpp"
+
+/*
+**	class definitions should be in the .cpp
+**	constructor and destructor are defined here
+*/
 
 Phonebook::Phonebook(void)
 {
@@ -45,6 +48,13 @@ void	Phonebook::add(int nb)
 	return ;
 }
 
+/*
+**	if the user inputs a random value presses enter, the loop would never end since it would display and endl,
+**	triggering the end of the ::cin, then loop, then trigger, etc.
+**	std::cin.clear() clears the input stream for any error flag, makes it ready for input again
+**	std::cin.ignore() ignores any character in the input until next \n (included)
+*/
+
 void	Phonebook::search(void)
 {
 	int	i = 0;
@@ -64,9 +74,7 @@ void	Phonebook::search(void)
 	{
 		std::cout << "Enter the contact index to see the number" << std::endl;
 		std::cin >> i;
-		if (std::cin.eof())
-			return ;		
-		else if (std::cin.good() && i > 0 && i <= this->nb_contacts)
+		if (std::cin.good() && i > 0 && i <= this->nb_contacts)
 		{
 			this->contacts[i - 1].print_contact();
 			return ;

@@ -6,7 +6,7 @@
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 11:38:14 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/12/02 10:34:14 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/12/09 12:22:33 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,10 @@ void	Contact::print_list(void)
 	std::cout << std::setw(10) << this->nb << " | ";
 	while (i < 3)
 	{
-		std::cout << std::setw(10);
 		if (info[i].size() <= 10)
-			std::cout << info[i];
+			std::cout << std::setw(10) << info[i];
 		else
-			std::cout << info[i].substr(0, 9) << ".";
+			std::cout << std::setw(9) << info[i].substr(0, 9) << ".";
 		i++;
 		std::cout << " | ";
 	}

@@ -18,21 +18,25 @@
 #include <limits>
 #include <iomanip>
 
+/*
+**	info array is private but can be accessed through public functions
+*/
+
 class Contact
 {
-    public:
+	public:
 
-    Contact(void);
-    ~Contact(void);
+	Contact(void);
+	~Contact(void);
 
-    void    fill_info(int i);
-    void    print_contact(void);
-    void    print_list(void);
+	void    fill_info(int i);
+	void    print_contact(void);
+	void    print_list(void);
 
-    private:
+	private:
 
-    int nb;
-    std::string info[5];
+	int nb;
+	std::string info[5];
 };
 
 #endif

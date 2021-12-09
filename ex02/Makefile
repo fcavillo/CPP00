@@ -6,7 +6,7 @@
 #    By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/24 17:54:15 by fcavillo          #+#    #+#              #
-#    Updated: 2021/11/30 12:22:19 by fcavillo         ###   ########.fr        #
+#    Updated: 2021/12/09 14:27:11 by fcavillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = accounts
 
 CC	= clang++
 
-CFLAGS	= -Wall -Wextra -Werror -std=c++98
+CFLAGS	= -Wall -Wextra -Werror #-std=c++98
 
 SRCS =	Account.cpp \
 		tests.cpp

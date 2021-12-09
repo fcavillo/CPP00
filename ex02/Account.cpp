@@ -6,7 +6,7 @@
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 12:22:36 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/12/06 17:14:16 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/12/09 14:25:00 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int		Account::getNbWithdrawals( void )
 void	Account::displayAccountsInfos( void )
 {
 	_displayTimestamp();
-	std::cout << "accounts:" << getNbAccounts() << ";total:" << Account::getTotalAmount() << ";deposits:" << getNbDeposits() << ";withdrawals:" << getNbWithdrawals() << std::endl;
+	std::cout << "accounts:" << getNbAccounts() << ";total:" << getTotalAmount() << ";deposits:" << getNbDeposits() << ";withdrawals:" << getNbWithdrawals() << std::endl;
 	return ;
 }
 
@@ -108,11 +108,17 @@ void	Account::displayStatus( void ) const
 	return ;
 }
 
+/*
+**	time(0) returns a time_t var that can be used by localtime()
+**	localtime() returns a tm struct that dispatches the timing info
+**	/!\ the year variable is calculated from 1900 + January is month 0
+*/
+
 void	Account::_displayTimestamp( void )
 {
 	time_t		now = time(0);
 	tm			*ltm = localtime(&now);
     
-	std::cout << "[" << 1900 + ltm->tm_year << 1 + ltm->tm_mon << ltm->tm_mday << "_" << ltm->tm_hour << ltm->tm_min << ltm->tm_min << "]" << " ";
+	std::cout << "[" << 1900 + ltm->tm_year << 1 + ltm->tm_mon << ltm->tm_mday << "_" << ltm->tm_hour << ltm->tm_min << ltm->tm_sec << "]" << " ";
 	return ;
 }
