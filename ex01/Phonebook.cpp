@@ -6,7 +6,7 @@
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 15:42:44 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/12/09 11:57:19 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/12/13 11:42:44 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ Phonebook::~Phonebook(void)
 
 void	Phonebook::print_header(void)
 {
-	int	i = 0;
-
 	std::cout << std::setw(10) << "index" << " | ";
 	std::cout << std::setw(10) << "first_name" << " | ";
 	std::cout << std::setw(10) << "last_name" << " | ";
@@ -42,7 +40,7 @@ void	Phonebook::print_header(void)
 
 void	Phonebook::add(int nb)
 {
-	this->contacts[nb - 1].fill_info(nb);
+	this->contacts[nb - 1].setInfo(nb);
 	if (this->nb_contacts < 8)
 		nb_contacts++;
 	return ;
@@ -76,7 +74,7 @@ void	Phonebook::search(void)
 		std::cin >> i;
 		if (std::cin.good() && i > 0 && i <= this->nb_contacts)
 		{
-			this->contacts[i - 1].print_contact();
+			this->contacts[i - 1].getInfo();
 			return ;
 		}
 		std::cin.clear();

@@ -6,7 +6,7 @@
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 12:22:36 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/12/09 14:57:31 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/12/13 11:28:31 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,7 @@ Account::Account( int initial_deposit ) : _amount(initial_deposit)
 Account::~Account( void )
 {
 	_displayTimestamp();
-	std::cout << "index:" << this->_accountIndex << ";amount:" << this->_amount << ";closed";
-	if (this->_accountIndex != getNbAccounts() - 1)	
-		std::cout << std::endl;
+	std::cout << "index:" << this->_accountIndex << ";amount:" << this->_amount << ";closed" << std::endl;
 }
 
 int		Account::getNbAccounts( void )

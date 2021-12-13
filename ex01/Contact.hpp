@@ -29,8 +29,8 @@ class Contact
 	Contact(void);
 	~Contact(void);
 
-	void    fill_info(int i);
-	void    print_contact(void);
+	void    setInfo(int i);
+	void    getInfo(void);
 	void    print_list(void);
 
 	private:

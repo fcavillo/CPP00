@@ -6,7 +6,7 @@
 /*   By: fcavillo <fcavillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 11:38:14 by fcavillo          #+#    #+#             */
-/*   Updated: 2021/12/09 12:22:33 by fcavillo         ###   ########.fr       */
+/*   Updated: 2021/12/13 11:29:38 by fcavillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ std::string	fields[5] =
 	"darkest_secret"
 };
 
-void    Contact::fill_info(int nb)
+void    Contact::setInfo(int nb)
 {
 	int	i = 0;
 
@@ -65,7 +65,7 @@ void	Contact::print_list(void)
 	std::cout << std::endl;
 }
 
-void	Contact::print_contact(void)
+void	Contact::getInfo(void)
 {
 	int	i = 0;
 
